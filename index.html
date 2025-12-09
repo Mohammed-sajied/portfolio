@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Saged - Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Cairo", sans-serif;
+        }
+
+        body {
+            background: #808183;
+            color: #ffffff;
+        }
+
+        /* ===== Header ===== */
+        header {
+            height: 100vh;
+            background: linear-gradient(to right, #191a3d, #17baf6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: rgb(193, 193, 193);
+            padding: 20px;
+            flex-direction: column;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            width: 250px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            background: rgb(255, 255, 255);
+            color: #0c703e;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #dfe0ff;
+        }
+
+        /* ===== Section ===== */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+        }
+
+        /* ===== Accordion Style ===== */
+        .accordion {
+            width: 90%;
+            max-width: 700px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        .accordion-item {
+            background: rgb(109, 108, 108);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+        }
+
+        .accordion-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .accordion-content {
+            display: none;
+            margin-top: 15px;
+            padding-left: 10px;
+            border-left: 3px solid #ffffff;
+        }
+
+        .accordion-content p {
+            margin-bottom: 10px;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #03064a;
+            color: white;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: rgb(255, 255, 255);
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+
+    <script>
+        function toggleAccordion(id) {
+            let content = document.getElementById(id);
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header>
+        <div class="container">
+            <h1>Mohamed Saged</h1>
+            <p>Network Engineer | CCNA Certified</p>
+            <!-- الصورة تحت الكلام -->
+            <img src="15c4ba3e-9827-4131-941a-6d6a21ab9a67.jpg" alt="Mohamed Saged">
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </header>
+
+    <!-- ===== About Section ===== -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a dedicated <strong>Network Engineer</strong> with strong experience in routing, switching,
+            troubleshooting, and Cisco technologies.  
+            I hold a <strong>CCNA</strong> and a specialized certificate from the 
+            <strong>Suez Canal Authority</strong>.
+        </p>
+    </section>
+
+    <!-- ===== My Skills Section ===== -->
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="accordion">
+
+            <!-- Skill 1 -->
+            <div class="accordion-item" onclick="toggleAccordion('skill1')">
+                <div class="accordion-title">Cisco Routing & Switching</div>
+                <div class="accordion-content" id="skill1">
+                    <p>• VLANs, Inter-VLAN Routing</p>
+                    <p>• OSPF Configuration</p>
+                    <p>• EIGRP, STP, DHCP</p>
+                </div>
+            </div>
+
+            <!-- Skill 2 -->
+            <div class="accordion-item" onclick="toggleAccordion('skill2')">
+                <div class="accordion-title">Network Troubleshooting</div>
+                <div class="accordion-content" id="skill2">
+                    <p>• Packet Tracer / Wireshark analysis</p>
+                    <p>• Latency and connectivity diagnostics</p>
+                    <p>• Identifying routing issues</p>
+                </div>
+            </div>
+
+            <!-- Skill 3 -->
+            <div class="accordion-item" onclick="toggleAccordion('skill3')">
+                <div class="accordion-title">Network Security</div>
+                <div class="accordion-content" id="skill3">
+                    <p>• Firewalls basics</p>
+                    <p>• ACLs configuration</p>
+                    <p>• Secure network design</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== Certifications Section ===== -->
+    <section id="certifications">
+        <h2>Certifications</h2>
+
+        <div class="accordion">
+
+            <!-- Cert 1 -->
+            <div class="accordion-item" onclick="toggleAccordion('cert1')">
+                <div class="accordion-title">CCNA Certificate</div>
+                <div class="accordion-content" id="cert1">
+                    <p>• Strong foundations in networking</p>
+                    <p>• Routing & Switching expertise</p>
+                    <p>• Cisco device configuration</p>
+                </div>
+            </div>
+
+            <!-- Cert 2 -->
+            <div class="accordion-item" onclick="toggleAccordion('cert2')">
+                <div class="accordion-title">Suez Canal Authority Certificate</div>
+                <div class="accordion-content" id="cert2">
+                    <p>• Practical training in networks</p>
+                    <p>• Internal connectivity systems</p>
+                    <p>• Applied network troubleshooting</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+        <p>© 2025 Mohamed Saged - All Rights Reserved</p>
+
+        <!-- روابط التواصل -->
+        <div>
+            <a href="mokasaged65@gmail.com" target="_blank">Email</a> |
+            <a href="https://github.com/Mohammed-sajied/Mohammed-sajied/edit/main/README.md" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
+        </div>
+    </footer>
+
+</body>
+</html>
